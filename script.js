@@ -1,8 +1,8 @@
 const example_input = document.getElementById("example_input")
 let operation = 1
 
-let current_account = 0   // use let
-let current_cash = 0      // use let
+let current_account = 0 
+let current_cash = 0    
 
 function add(num) {
     operation = operation + Number(num);
