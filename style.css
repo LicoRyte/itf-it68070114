@@ -1,9 +1,89 @@
 nav {
     background-color:orange;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 body {
-    margin: 0;
+    margin: 0px;
+    font-family: "lexend", sans-serif;
+    background-color: #F8F8F8;
 }
+
+.two-column {
+  display: flex;
+  gap: 48px;
+  align-items: stretch;
+  margin-top: 18px;
+}
+
+.two-column > .column {
+  flex: 1 1 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;            
+}
+
+.wrapper img {
+  width: 124px;
+}
+
+.text div {
+  line-height: 0.8;
+}
+
+
+.text_area_section {
+    margin-top: 32px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 32px;
+    font-family: "lexend", sans-serif;
+    border-radius: 8px;
+    border : 2px solid;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+
+}
+.text label {
+  display: grid;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.text label input, 
+.text label select {
+  width: 100%;
+}
+
+button, select {
+    font-family: "lexend", sans-serif;
+    display: inline-block;
+    background-color: #b5e61d;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.delta-sprite {
+    position: fixed;
+    bottom: 0px;
+    right: 8px;
+    display: flex;
+    align-items: flex-end;
+    z-index: 9999;
+    user-select: none;
+}
+
+
