@@ -84,6 +84,12 @@ button, select {
     border: none;
     border-radius: 8px;
 }
+button:hover, select:hover {
+  background-color: orange;
+}
+button:active {
+  background-color: dodgerblue;
+}
 
 .delta-sprite {
     position: fixed;

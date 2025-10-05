@@ -12,6 +12,7 @@ function add(num) {
 function log(account_amount, cash_amount) {
     const history = document.getElementById("historylog");
     history.value += operation + ", Current Account Balance: " + account_amount + ", Current Cash Balance: " + cash_amount + "\n";
+    history.scrollTop = history.scrollHeight;
 }
 
 
@@ -43,7 +44,8 @@ function banking() {
             log(current_account, current_cash)
         }
         else {
-            history.value += "Couldn't deposit entered balance. (Insufficient cash balance)"
+            history.value += "Couldn't deposit entered balance. (Insufficient cash balance)" + "\n"
+            history.scrollTop = history.scrollHeight;
         }
     }
     else {
@@ -53,7 +55,8 @@ function banking() {
             log(current_account, current_cash)
         }
         else {
-            history.value += "Couldn't withdraw entered balance. (Insufficient account balance)"
+            history.value += "Couldn't withdraw entered balance. (Insufficient account balance)" + "\n"
+            history.scrollTop = history.scrollHeight;
         }
 
     }
