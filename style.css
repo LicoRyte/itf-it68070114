@@ -60,25 +60,18 @@ textarea {
   margin-bottom: 8px;
 }
 
-.text label input, 
-.text label select {
-  width: 100%;
-}
+
 
 .css-input {
      padding: 8px;
      font-size: 16px;
-     border-width: 4px;
+     border-width: 2px;
      border-color: #62b2e3;
      background-color: #FFFFFF;
      color: #000000;
      border-style: solid;
      border-radius: 8px;
-     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
-     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
-}
- .css-input:focus {
-     outline:none;
+
 }
 
 button, select {
@@ -101,5 +94,6 @@ button, select {
     z-index: 9999;
     user-select: none;
 }
+
 
 

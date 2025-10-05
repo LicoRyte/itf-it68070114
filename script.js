@@ -2,7 +2,8 @@ const example_input = document.getElementById("example_input")
 let operation = 1
 
 let current_account = 0 
-let current_cash = 0    
+let current_cash = 0
+let previous_log = ""   
 
 function add(num) {
     operation = operation + Number(num);
@@ -11,13 +12,8 @@ function add(num) {
 function log(account_amount, cash_amount) {
     const history = document.getElementById("historylog");
     history.value += operation + ", Current Account Balance: " + account_amount + ", Current Cash Balance: " + cash_amount + "\n";
-    history.scrollTop = history.scrollHeight;
 }
 
-function errorlog() {
-    const history = document.getElementById("historylog");
-    history.value += "<----OPERATION ERROR, TRANSACTION DENIED---->" + "\n";
-}
 
 
 function change() {
@@ -34,6 +30,7 @@ function change() {
 }
 
 function banking() {
+    const history = document.getElementById("historylog");
     const operation_selector = document.getElementById("operation");
     const selected_option = operation_selector.value;
     const money_box = document.getElementById("money")
@@ -46,7 +43,7 @@ function banking() {
             log(current_account, current_cash)
         }
         else {
-            errorlog();
+            history.value += "Couldn't deposit entered balance. (Insufficient cash balance)"
         }
     }
     else {
@@ -56,7 +53,7 @@ function banking() {
             log(current_account, current_cash)
         }
         else {
-            errorlog();
+            history.value += "Couldn't withdraw entered balance. (Insufficient account balance)"
         }
 
     }
