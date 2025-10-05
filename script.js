@@ -3,7 +3,7 @@ let operation = 1
 
 let current_account = 0 
 let current_cash = 0
-let previous_log = ""   
+  
 
 function add(num) {
     operation = operation + Number(num);
@@ -23,7 +23,7 @@ function change() {
     const acc_value = Number(account_setter.value);
     const cash_value = Number(cash_setter.value);
     
-    current_account = acc_value;   // now allowed
+    current_account = acc_value;
     current_cash = cash_value;
     log(current_account, current_cash);
     add(1);
@@ -42,6 +42,7 @@ function banking() {
             current_account += money
             current_cash -= money
             log(current_account, current_cash)
+            add(1)
         }
         else {
             history.value += "Couldn't deposit entered balance. (Insufficient cash balance)" + "\n"
@@ -53,6 +54,7 @@ function banking() {
             current_account -= money
             current_cash += money
             log(current_account, current_cash)
+            add(1)
         }
         else {
             history.value += "Couldn't withdraw entered balance. (Insufficient account balance)" + "\n"
@@ -61,5 +63,5 @@ function banking() {
 
     }
     
-    add(1)
+    
 }
